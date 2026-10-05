@@ -1,52 +1,53 @@
 import 'package:lab1_dart/lab1_dart.dart' as lab1_dart;
 
-String greet1(String name) {
-    return 'Привет, $name!';
-  }
+// String greet1(String name) {
+//     return 'Привет, $name!';
+//   }
 
-String greet2(String name) => 'Привет, $name!';
-int square(int x) => x * x;
-double half(double x) => x / 2;
+// String greet2(String name) => 'Привет, $name!';
+// int square(int x) => x * x;
+// double half(double x) => x / 2;
 
-void describePet({required String name, String species = 'кот', int age = 0}) {
-  print('$name - $species, возраст $age');
-}
+// void describePet({required String name, String species = 'кот', int age = 0}) {
+//   print('$name - $species, возраст $age');
+// }
 
-String repeat(String text , [int times = 2]) {
-  String result = '';
-  for (int i = 0; i < times; i++) {
-    result += text;
-  }
-  return result;
-}
+// String repeat(String text , [int times = 2]) {
+//   String result = '';
+//   for (int i = 0; i < times; i++) {
+//     result += text;
+//   }
+//   return result;
+// }
 
 void main() {
-  print(greet1('Артём'));
-  print(greet1('Мария'));
+  // print(greet1('Артём'));
+  // print(greet1('Мария'));
 
-  print(greet2('чайлд'));
-  print(square(3));
-  print(half(5));
+  // print(greet2('чайлд'));
+  // print(square(3));
+  // print(half(5));
 
-  describePet(name: 'Барсик', age: 3);
-  describePet(name: 'Шарик', species: 'пёс');
+  // describePet(name: 'Барсик', age: 3);
+  // describePet(name: 'Шарик', species: 'пёс');
 
-  print(repeat('xa'));
-  print(repeat('xa', 3));
-  print(repeat('xa', 4));
-  print(repeat('xa', 5));
-  print(repeat('xa', 6));
+  // print(repeat('xa'));
+  // print(repeat('xa', 3));
+  // print(repeat('xa', 4));
+  // print(repeat('xa', 5));
+  // print(repeat('xa', 6));
 
-  List<int> numbers = [3, 1, 4, 1, 5, 9];
-  numbers.sort((a, b) => b - a);
-  print(numbers);
-  List<String> names = ['Артём', 'Мария', 'Иван'];
-  List<String> upper = names.map((name) => 
-  name.toUpperCase()).toList();
-  print(upper);
-  List<String> longNames = names.where
-  ((name) => name.length > 4).toList();
-  print(longNames);
+  // List<int> numbers = [3, 1, 4, 1, 5, 9];
+  // numbers.sort((a, b) => b - a);
+  // print(numbers);
+  // List<String> names = ['Артём', 'Мария', 'Иван'];
+  // List<String> upper = names.map((name) => 
+  // name.toUpperCase()).toList();
+  // print(upper);
+  // List<String> longNames = names.where
+  // ((name) => name.length > 4).toList();
+  // print(longNames);
+
   // String name = 'Артём';
   // int age = 20;
   // double height = 1.75;
@@ -104,5 +105,43 @@ void main() {
   // for (var fruit in fruits2) {
   //   print(fruit);
   //}
-  
+
+  int score2 = 85;
+  String grade;
+  if (score2 >= 90) {
+    grade = 'A';
+  } else if (score2 >= 75) {
+    grade = 'B';
+  } else {
+    grade = 'C';
+  }
+  print(grade);
+
+  String result = score2 >= 60 ? 'Сдал' : 'Не сдал';
+  print(result);
+
+  for (int i = 0; i < 5; i++) {
+    print(i);
+  }
+  List<String> fruits3 = ['яблоко', 'банан', 'груша'];
+  for (var fruit in fruits3) {
+    print(fruit);
+  }
+  int n = 0;
+  while (n < 3) {
+    print(n);
+    n++;
+  }
+  String day = '';
+  switch (day) {
+    case 'Сб':
+    case 'Вс':
+      print('Выходной');
+      break;
+    case 'Пн':
+      print('Начало недели');
+      break;
+    default:
+      print('Рабочий день');
+  }
 }
